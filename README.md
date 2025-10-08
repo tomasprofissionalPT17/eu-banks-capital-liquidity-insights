@@ -2,6 +2,10 @@
 
 # EU Banks: Capital & Liquidity Insights (ECB CBD2)
 
+![License](https://img.shields.io/badge/license-MIT-informational)
+![Release](https://img.shields.io/github/v/release/HarryWi/eu-banks-capital-liquidity-insights)
+![Last commit](https://img.shields.io/github/last-commit/HarryWi/eu-banks-capital-liquidity-insights)
+
 **PBIX:** [Download (ZIP)](../../releases/latest/download/ECB_CBD2_Bank_Metrics.pbix.zip) ·
 **PDF preview:** [Open](docs/EU%20Banks%20_%20Capital%20%26%20Liquidity%20Insights.pdf) ·
 **SQL:** [/sql/ecb_cbd2_pipeline.sql](sql/ecb_cbd2_pipeline.sql) ·
