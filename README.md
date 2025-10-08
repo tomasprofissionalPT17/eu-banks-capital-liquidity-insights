@@ -1,4 +1,12 @@
-# EU Banks: Capital & Liquidity Insights (ECB CBD2)
+![Liquidity metrics](docs/screenshots/Liquidity%20metrics%20screenshot.png)
+
+**EU Banks: Capital & Liquidity Insights (ECB CBD2)**  
+Power BI + PostgreSQL project tracking CET1, Tier 1, Own Funds, LCR, liquidity buffer, and net liquidity outflow.
+
+- 📄 PDF preview: [Open](docs/EU%20Banks%20_%20Capital%20%26%20Liquidity%20Insights.pdf)
+- 📁 SQL: [/sql/ecb_cbd2_pipeline.sql](sql/ecb_cbd2_pipeline.sql)
+- 📁 Data sample: [/data](data/)
+- 📁 Power BI notes: [/powerbi](powerbi/)
 
 Power BI dashboard tracking CET1, Tier 1, Own Funds, LCR, liquidity buffer and net liquidity outflow for EU countries, built on a minimal PostgreSQL pipeline + ECB CBD2 data.
 
